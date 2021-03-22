@@ -18,6 +18,10 @@
 
         <!-- Dependencies Version-->
         <sringframework.boot.version>2.4.4</sringframework.boot.version>
+        <lombok.version>1.18.10</lombok.version>
+        <h2database.version>1.4.200</h2database.version>
+        <jersey.common.version>2.22.2</jersey.common.version>
+        <jakarta.ws.rs.version>2.1.5</jakarta.ws.rs.version>
     </properties>
 
 </project>
