@@ -27,11 +27,44 @@ public class Transaction {
     @Column(name = "TRANSACTION_DATE")
     private Date transactionDate;
 
+    @ManyToOne
+    @JoinColumn(name = "disbursementId", nullable = true)
+    private Disbursement disbursement;
+
+    public Long getTransactionId() {
+        return transactionId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public Float getAmount() {
+        return amount;
+    }
+
+    public String getCardData() {
+        return cardData;
+    }
+
+    public Date getTransactionDate() {
+        return transactionDate;
+    }
+
+    public Disbursement getDisbursement() {
+        return disbursement;
+    }
+
+    public void setDisbursement(Disbursement disbursement) {
+        this.disbursement = disbursement;
+    }
+
     public Transaction(long userId, float amount, String cardData, Date transactionDate) {
         this.userId = userId;
         this.amount = amount;
         this.cardData = cardData;
         this.transactionDate = transactionDate;
+        this.disbursement = null;
     }
 
     public Transaction() {
@@ -45,6 +78,7 @@ public class Transaction {
                 "amount=" + this.amount + "," +
                 "cardData=" + this.cardData + "," +
                 "transactionDate=" + this.transactionDate +
+                "disbursement=" + ((this.disbursement == null) ? "N/A" : this.disbursement.getDisbursementId()) +
                 "}";
     }
 }
