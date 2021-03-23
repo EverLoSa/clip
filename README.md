@@ -21,7 +21,7 @@ NOTA: Para probar los endpoints se pueden utilizar tools como postman o http des
                 "cardData": "Card Data information"
             }
 
-
+---
 - **Get Transaction by user:** *url: http://localhost:8080/clip/transactions?user_id=2*
 - **Request Parameters:** UserId
 - **Output:**
@@ -34,9 +34,11 @@ NOTA: Para probar los endpoints se pueden utilizar tools como postman o http des
         "disbursement": null
     }
 
+---
 ### Disbursement
 - **Make Disbursement:** *http://localhost:8080/clip/disbursement*
 
+---
 - **Get Disbursements:** *http://localhost:8080/clip/disbursement*
 - **Output**
 {
